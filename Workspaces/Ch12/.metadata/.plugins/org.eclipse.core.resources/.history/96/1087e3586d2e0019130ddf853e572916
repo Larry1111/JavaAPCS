@@ -1,0 +1,18 @@
+
+public class Coin implements Money{
+	private double amount;
+	public Coin(Money item) {
+		if(item == new Quarter())
+			amount = 0.25;
+		if(item == new Dime())
+			amount = 0.10;
+		if(item == new Nickel1())
+			amount = 0.05;
+	}
+	public Coin() {
+		
+	}
+	public double getAmount() {
+		return amount;
+	}
+}

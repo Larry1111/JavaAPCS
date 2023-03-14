@@ -1,0 +1,10 @@
+
+public class Examples {
+	public static boolean endsWithStar(String str) {
+		int len = str.length();
+		return len>0&&str.charAt(len-1) =='*';
+	}
+	public static void main(String[] args) {
+		
+	}
+}

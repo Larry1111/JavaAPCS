@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+/Users/larryli/Desktop/APCS/Workspaces/Ch17/.metadata/.plugins/org.eclipse.jdt.core
+28299939.index
+4154239352.index
+1848347405.index
+914747319.index
+2835634296.index

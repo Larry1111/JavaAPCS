@@ -1,0 +1,9 @@
+
+public class Quarter extends Coin{
+	public Quarter(){
+		super(null);
+	}
+	public String toString(){
+		return "quarter";
+	}
+}

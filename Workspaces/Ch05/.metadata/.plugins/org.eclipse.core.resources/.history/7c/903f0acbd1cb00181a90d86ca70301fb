@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class SwapDigits {
+	Scanner scn = new Scanner(System.in);
+	String result = null;
+	System.out.println("Enter the value: ");
+	String str = scn.nextLine();
+	 
+	if(str.length() == 1)
+	    result = str + "0";
+	else
+	    result = str.substring(0, (str.length() - 2)) + 
+	            str.charAt(str.length() - 1) + str.charAt(str.length() - 2);
+	}
+}

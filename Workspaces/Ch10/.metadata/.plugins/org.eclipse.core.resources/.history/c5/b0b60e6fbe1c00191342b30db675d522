@@ -1,0 +1,23 @@
+import acm.graphics.GRect;
+
+public class GBlock extends GRect{
+
+	//these are the rows and columns in the board array
+	public int rowInArray;
+	public int columnInArray;
+	//boolean to indicate if this block needs to be removed
+	public boolean toRemove;
+	
+	public GBlock(double x, double y, double width, double height, int row, int column) {
+		super(x,y,width,height);
+		rowInArray = row;
+		columnInArray = column;
+		toRemove = false;
+			
+	}
+	public void setLocationInArray(int row, int column){
+		rowInArray = row;
+		columnInArray = column;
+	}
+
+}

@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Chap8 {
+	//2b
+	public static boolean twoStar(String str)
+	{
+		if(str.length()>=2 && str.charAt(str.length()-1)=='*' && str.charAt(str.length()-2)=='*')
+			return true;
+		else 
+			return false;
+	}
+	
+	//3
+	public static String removeDashes(String str)
+	{
+		String num = str.replace("-", "");
+		return num;
+	}
+	
+	//5b
+	public static String last5(String str)
+	{	
+		String ccNumber = "4111 1111 1111 1111";
+		String newNum = ccNumber.replaceAll("\\s", "");
+		String last5 = newNum.substring(newNum.length()-6, newNum.length()-1);
+		return last5;
+	}
+	
+	//7
+	public static String convertName(String str)
+	{
+		String str2 = str.trim();
+		int indexComma = str2.indexOf(",");
+		String name = str2.substring(indexComma+1, str2.length()) + " " + str2.substring(0, indexComma); 
+		return name;
+	}
+	public static String posToNeg(String str)
+	{
+		String str2 = str.replace("1", "0").replace("0", "1");
+		return str2;
+	}
+	//
+	public static void main(String[] args) {
+		while(true) {
+		Scanner kboard = new Scanner(System.in);
+		String input = kboard.nextLine();
+		System.out.println(posToNeg(input));
+		}
+	}
+}

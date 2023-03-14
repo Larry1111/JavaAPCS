@@ -1,0 +1,13 @@
+
+public class FCConverter {
+	
+		private double f;
+		private double c;
+	
+	public double setFahrenheit(int F) {
+		return c = 5 / 9*(F-32);
+	}
+	public double getCelsius(int C) {
+		return f= 9/5*C+32;
+}
+}

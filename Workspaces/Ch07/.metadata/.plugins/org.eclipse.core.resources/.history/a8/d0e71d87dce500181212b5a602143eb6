@@ -1,0 +1,27 @@
+
+public class mersennePrimes {
+	public static void mersennePrime() {
+		  int min;
+		  int max = 150000;
+		  for(min=2;min<=max;min*=2-1) {
+			  boolean noFactors = true;
+			  for (int m = 2; noFactors; m++)
+				{
+				  if (m*m > min-1) 
+						break;
+				  if(m % 2 == 0) {
+						if (m != 2) 
+							m++;
+						}
+				  if (min % m == 0) 
+					noFactors = false;
+				  else 
+					noFactors = true;
+				  	System.out.println(min);
+				}
+		  }
+	  }
+	public static void main(String[] args) {
+		mersennePrime();
+	}
+}

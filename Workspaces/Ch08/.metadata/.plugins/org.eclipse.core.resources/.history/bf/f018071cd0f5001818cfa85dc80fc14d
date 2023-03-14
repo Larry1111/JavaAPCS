@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Chap8 {
+	//2b
+	public static boolean twoStar(String str)
+	{
+		if(str.length()>=2 && str.charAt(str.length()-1)=='*' && str.charAt(str.length()-2)=='*')
+			return true;
+		else 
+			return false;
+	}
+	
+	//3
+	public static String removeDashes(String str)
+	{
+		String num = str.replace("-", "");
+		return num;
+	}
+	
+	public static String last5(String str)
+	{	
+		String ccNumber = "4111 1111 1111 1111";
+		String last5= ccNumber.substring(str.length()-5, str.length());
+		return last5;
+	}
+	public static void main(String[] args) {
+		while(true) {
+		Scanner kboard = new Scanner(System.in);
+		String input = kboard.nextLine();
+		System.out.println(last5(input));
+		}
+	}
+}

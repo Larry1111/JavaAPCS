@@ -1,0 +1,10 @@
+
+public class Bill implements Money {
+
+	@Override
+	public double getAmount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

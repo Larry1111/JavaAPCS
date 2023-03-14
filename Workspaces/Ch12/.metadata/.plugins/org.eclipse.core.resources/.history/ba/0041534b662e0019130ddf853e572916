@@ -1,0 +1,6 @@
+
+public class Dime extends Coin{
+	public String toString(){
+		return "dime";
+	}
+}

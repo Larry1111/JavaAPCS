@@ -1,0 +1,6 @@
+
+public class PoemTest{
+	public static void main(String[] args) {
+		Poem.printRhythm();
+	}
+}

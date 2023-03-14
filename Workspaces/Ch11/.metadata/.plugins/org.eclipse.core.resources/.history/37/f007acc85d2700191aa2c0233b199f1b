@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+
+public class IndexEntry {
+	private String word;
+	private ArrayList<Integer> numbsList;
+	public void add(int num) {
+		
+	}
+	public String getWord() {
+		
+	}
+	public toString() {
+		
+	}
+	
+}

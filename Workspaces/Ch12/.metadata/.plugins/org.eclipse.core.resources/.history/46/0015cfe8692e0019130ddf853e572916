@@ -1,0 +1,9 @@
+
+public class Dime extends Coin{
+	public Dime() {
+		Coin q = new Quarter();
+	}
+	public String toString(){
+		return "dime";
+	}
+}

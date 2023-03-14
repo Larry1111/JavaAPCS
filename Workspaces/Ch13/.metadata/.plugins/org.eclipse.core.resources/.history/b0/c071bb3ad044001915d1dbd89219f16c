@@ -1,0 +1,55 @@
+
+public class Assignment {
+	
+//1
+	public static int product(int a, int b) {
+		if(b == 1) {
+			return a;
+		}
+		else {
+			return a + product(a, b-1);
+		}
+	}
+	
+//3
+//5 a,b,c
+	public static boolean isGood(String s) {
+		int n = s.length();
+		return n<2 || (s.charAt(0)== s.charAt(n-1)
+				&& isGood(s.substring(1,n-1)));
+	}
+//7
+	//00100123
+//10
+	//public int gcf(int a, int b) {
+		
+	//}
+//11
+//14
+	public static long fibonacci(int n) {
+		int sum = 1;
+		if(n<=2) {
+			sum = 1;
+		}
+		for(int i = 1; i < n; i++) {
+			sum += sum*(i-1)+i;
+		}
+	}
+	//1,1,2,3,5,8,13,21
+//15
+//17
+//18
+	public static double continuedFrac(int n) {
+		if(n==1) {
+			return 1;
+		}
+		else {
+			return 1 + 1/continuedFrac(n-1);
+		}
+	}
+	public static void main(String[] args) {
+		System.out.println(product(3,4));
+		System.out.println(continuedFrac(14));
+		System.out.println(isGood("XXXX"));
+	}
+}

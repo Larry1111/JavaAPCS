@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Excercise2 {
+	public int ln(int n) {
+		int sum = 0;
+		int k =1;
+		while(Math.abs(k)<=n) {
+			sum+= 1/k;
+			k*=-1;
+			if(k%2==0) {
+				k++;
+			}
+			else {
+				k--;
+			}
+		}
+		return sum;
+	}
+}
+public static void main(String[] args) {
+	Scanner kb = new Scanner(System.in);
+	
+}

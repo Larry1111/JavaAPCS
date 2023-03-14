@@ -1,0 +1,9 @@
+
+public class Quarter extends Coin{
+	public Quarter(){
+		System.out.println("0.25");
+	}
+	public String toString(){
+		return "quarter";
+	}
+}

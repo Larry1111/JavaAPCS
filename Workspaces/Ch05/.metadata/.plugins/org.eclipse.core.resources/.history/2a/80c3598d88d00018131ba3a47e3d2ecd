@@ -1,0 +1,10 @@
+import java.time.DayOfWeek;
+import java.util.Scanner; 
+public class dayOfWeeek {
+	public int dayOfWeek(int day, int date) {
+		return 1;
+		
+	}
+}
+
+

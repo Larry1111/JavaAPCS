@@ -1,0 +1,108 @@
+import java.util.ArrayList;
+
+public class SortedWordList extends ArrayList<String> {
+	
+	public SortedWordList() {
+		super();
+	}
+	public SortedWordList(int x) {
+		super(x);
+	}
+	public boolean contains(String word) {
+		if(this.indexOf(word)==-1) {
+			return false;
+		}
+		return true;
+	}
+	public int indexOf(String word) {
+		 int left = 0, right = this.size() - 1, middle;
+		 
+	        while (left <= right)
+	        {
+	        	middle = (left+right)/2;
+	            // Take the index of the middle element between
+	            // "left" and "right":
+	            middle = (left + right) / 2;
+	            // Compare this element to the target value
+
+	            int diff = word.compareToIgnoreCase(this.get(middle));
+	            if (diff > 0)
+	            {
+	                left = middle + 1;
+	            }
+	            else if (diff < 0)
+	            {
+	                right = middle - 1;
+	            }
+	            else
+	            {
+	                return middle;
+	            }
+	        }
+	        return -1;
+	    }
+	public boolean add(String word) {
+		if (this.contains(word))
+            return false;
+
+        int left = 0, right = this.size() - 1, mid;
+        while (left <= right)
+        {
+            mid = (left + right) / 2;
+            int diff = word.compareTo(this.get(mid));
+            if (diff > 0)
+                left = mid + 1;
+            else if (diff < 0)
+                right = mid - 1;
+        }
+        super.add(right + 1, word);
+        return true;
+	}
+	public void add(int i, String word) {
+		if(i!=0 && i<this.size()) {
+		if(word.compareToIgnoreCase(this.get(i-1))>0
+			&&word.compareToIgnoreCase(this.get(i))<0
+			&&!word.contains(this.get(i-1))
+			&&!word.equals(this.get(i))) {
+			super.add(i,word);
+		}
+		}
+		else
+		if(i==this.size()) {
+			if(word.compareToIgnoreCase(this.get(i-1))>0
+					&&!word.equals(this.get(i-1)))
+			super.add(i, word);
+		}
+		
+		else if(i==0) {
+				if(word.compareToIgnoreCase(this.get(i))<0
+				&&!word.equals(this.get(i))){
+					super.add(i, word);
+		}
+		}
+		else {
+			throw new IllegalArgumentException("word=" + word + " i=" + i);
+		}
+	}
+	
+	public String set(int i, String word) {
+		if(i!=0&&i<this.size()) {
+		if(word.compareToIgnoreCase(this.get(i-1))>0
+				&&word.compareToIgnoreCase(this.get(i+1))<0
+				&&!word.equals(this.get(i-1))
+				&&!word.equals(this.get(i+1))) {
+			super.set(i,word);
+		}
+		}
+		else if(i==0) {
+			if(word.compareToIgnoreCase(this.get(i+1))<0
+				&&!word.equals(this.get(i+1))) {
+				super.set(i,word);
+			}
+		}	
+		else {
+			throw new IllegalArgumentException("word=" + word + " i=" +i);
+		}
+		return word;
+	}
+}

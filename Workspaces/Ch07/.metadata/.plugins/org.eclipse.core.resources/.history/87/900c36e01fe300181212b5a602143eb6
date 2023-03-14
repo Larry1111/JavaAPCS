@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Ripples {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in); 
+		System.out.println("Enter Quantity"); 
+		int quantity = s.nextInt(); 
+
+		while ((quantity%25) != 0) { 
+		System.out.println("Ripples can only be ordered in packs of 25"); 
+		System.out.println("Enter Quantity"); 
+		quantity = s.nextInt(); 
+
+		} 
+
+		System.out.println("Next customer (y/n): "); 
+		String cont = s.nextLine(); 
+
+		if (cont.equals("n")){ 
+		System.out.println("Thank you for using ripple systems"); 
+		System.exit(0); 
+		} 
+
+		else { 
+		continue; 
+		} 
+		
+		System.out.printf("You have ordered %d Ripples -- $%.2f\n\n", quantity, price * quantity); 
+
+		Scanner keyboard = new Scanner (System.in); 
+		char answer; 
+		int quantity2 = keyboard.nextInt(); 
+		keyboard.nextLine(); 
+}
+	}

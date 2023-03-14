@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+//4
+public class Exercises {
+	public static Double min(ArrayList<Double> list)
+	{
+		double min = list.get(0);
+		for(double elmt: list)
+		{
+			if(min > elmt) {
+				min=elmt;
+			}
+			}
+		return min;
+		}
+//Double min = list.get(0);
+//for (Double elmt: list)
+//if(x.compareTo(min)<0)
+//min=x;
+//return min;
+	public static ArrayList<String> reverse(ArrayList<String> list)
+	{
+		ArrayList<String> list1 = new ArrayList<String>(list.size());
+		for(String elmt: list)
+		{
+			list1.add(0,elmt);
+		}
+		return list1;
+	}
+//	ArrayList<String> list1 = new ArrayList<String>(list.size());
+//	for(int i = list.size()-1;i>=0; i--);
+//	{
+//		list1.add(list.get(i));
+//	}
+//	return list1;
+	public static void main(String[] args) {
+		Scanner kboard = new Scanner(System.in);
+		ArrayList<String> words = new ArrayList<String>();
+		words.add("apple");
+		words.add("banana");
+		words.add("Catalan");
+		words.add("Euler");
+		reverse(words);
+		
+	}
+	}

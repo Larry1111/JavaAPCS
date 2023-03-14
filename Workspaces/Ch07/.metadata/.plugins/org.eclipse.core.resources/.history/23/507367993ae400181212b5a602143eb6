@@ -1,0 +1,8 @@
+
+public class printCheckerBoard {
+	public void printCheckerboard(int n) {
+		int height = n;
+		
+	}
+
+}

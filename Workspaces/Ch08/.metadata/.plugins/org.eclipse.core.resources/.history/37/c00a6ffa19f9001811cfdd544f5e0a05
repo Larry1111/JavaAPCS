@@ -1,0 +1,61 @@
+
+public class LipogramAnalyzer {
+	
+private String text;
+	
+	public LipogramAnalyzer(String text)
+	{
+		this.text=text;
+	}
+	
+	public String mark(char letter)
+	{
+		return text=text.replace(letter, '#');
+	}
+	
+	public String allWordsWith(char letter)
+	{
+		// get string length
+        
+        System.out.println("lengthOfString: " + text.length());
+        String word = "", wordsThatContainChar = "";
+        CharSequence charSequence = ""+ letter;
+
+        for(int i = 0; i < text.length(); i++) {
+            char next = text.charAt(i);
+
+            System.out.println("char i(" + i + ")= " + next);
+
+            if  (Character.isLetter(next)){
+                System.out.println("char i(" + i + ")= " + next);
+                word = word + Character.toString(next);
+                System.out.println("word " + word);
+            }
+            if (!Character.isLetter(next)){
+                System.out.println("char i(" + i + ")= " + next);
+                System.out.println("word " + word);
+                if (word.contains(charSequence)){
+                    if (wordsThatContainChar.isEmpty()){
+                        wordsThatContainChar = wordsThatContainChar + word;
+                    } else {
+                        wordsThatContainChar = wordsThatContainChar +" "+ word;
+                    }
+                    System.out.println("wordsThatContainChar " + wordsThatContainChar);
+                }
+                System.out.println("word " + word);
+                word = "";
+                System.out.println("word " + word);
+            }
+        }
+        return wordsThatContainChar;
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		LipogramAnalyzer la=new LipogramAnalyzer("testing testing cool");
+		System.out.println(la.allWordsWith('t'));
+		
+	}
+
+}

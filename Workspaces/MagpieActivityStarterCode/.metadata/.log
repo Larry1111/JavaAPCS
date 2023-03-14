@@ -1,0 +1,43 @@
+!SESSION 2018-11-19 09:37:05.033 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=10.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.dsl.product -product org.eclipse.epp.package.dsl.product -keyring /Users/lizhiyuan/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.dsl.product -data /Users/lizhiyuan/Desktop/APCS/Workspaces/MagpieActivityStarterCode -product org.eclipse.epp.package.dsl.product -keyring /Users/lizhiyuan/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-11-19 09:37:11.068
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2018-11-27 08:38:20.443 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=10.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.dsl.product -keyring /Users/lizhiyuan/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.dsl.product -keyring /Users/lizhiyuan/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-11-27 08:39:18.384
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2018-11-27 08:39:21.539
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2018-11-29 09:08:49.852 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=10.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.dsl.product -product org.eclipse.epp.package.dsl.product -keyring /Users/lizhiyuan/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.dsl.product -data /Users/lizhiyuan/Desktop/APCS/Workspaces/MagpieActivityStarterCode -product org.eclipse.epp.package.dsl.product -keyring /Users/lizhiyuan/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-11-29 09:08:55.841
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2018-12-07 08:45:39.979 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=10.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.dsl.product -product org.eclipse.epp.package.dsl.product -product org.eclipse.epp.package.dsl.product -keyring /Users/lizhiyuan/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.dsl.product -product org.eclipse.epp.package.dsl.product -data /Users/lizhiyuan/Desktop/APCS/Workspaces/MagpieActivityStarterCode -product org.eclipse.epp.package.dsl.product -keyring /Users/lizhiyuan/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-12-07 08:45:46.190
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

@@ -1,0 +1,13 @@
+
+public class Coin implements Money{
+	private double amount;
+	public Coin(Money item) {
+		this.item  = 
+		
+	}
+	public Coin() {
+	}
+	public double getAmount() {
+		return amount;
+	}
+}

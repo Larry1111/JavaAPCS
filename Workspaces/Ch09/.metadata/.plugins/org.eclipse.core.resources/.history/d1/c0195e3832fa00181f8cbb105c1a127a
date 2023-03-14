@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+public class Examples {
+	
+	public static void printIntArray(int[] arr) {
+
+		for(int i=0; i< arr.length; i++) 
+			System.out.print(arr[i]+" "); 
+		System.out.println();
+	}
+	//3
+	public static void swapFirstLast(int[] a) {
+		int i = a.length -1;
+		if (i >= 2)
+		  {
+		    int temp = a[0];
+		    a[0] = a[i];
+		    a[i] = temp;
+		} 
+	}
+	//5
+	public static char getRandomRps(char[] a) {
+		int i = (int)(Math.random()*a.length);
+		return a[i];
+	}
+	//27
+	public static double averageTopTwo(int[] scores)
+	{
+		int i,n = scores.length;
+		int iMax1 = 0;
+		int iMax2 = 1;
+		if (scores[iMax2]> scores[iMax1])
+		{
+			i = iMax1;
+			iMax1 = iMax2;
+			iMax2 = i;
+		
+		}
+		for (i = 2;i < n; i++)
+		{
+			if (scores[i] > scores[iMax1])
+			{
+				iMax2 = iMax1;
+				iMax1 = i;
+			}
+			else if(scores[i] > scores[iMax2]) {
+				iMax2 = i;
+
+			}
+		}
+		return (scores[iMax1] + scores[iMax2])/2;
+	}
+	public static int[][] input2D(int row, int col) 
+	{
+		int[][] a = new int[row][col];
+		Scanner kboard = new Scanner(System.in);
+		
+		for(int r= 0; r<row; r++)
+			for(int c= 0 ;c < col;c++) {
+				System.out.print("Enter a[" + r + "][" + c + "]:");
+				a[r][c] = kboard.nextInt();
+			}
+	public static void output2D(int[][]a)
+		{
+			
+		}
+	public static void main(String[] args) {
+			
+			int[][]array = input2D(2,3);
+			output2D(array);
+			
+	}
+	}
+	
+	public static void main(String[] args) {
+		//int[] arr = new int[3];
+		//arr = new int{1,2,3};
+		//or
+		char[] arr = {'r','r','r','p','p','p','p','p','s','s','s','s','s','s'};
+		System.out.println(getRandomRps(arr));
+		
+	}
+}	
+

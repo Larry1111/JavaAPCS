@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class Complex {
+	private final double real;
+	private final double imag;
+	public Complex(double real)
+	{
+		this.real = real;
+		this.imag = 0.0;
+	}
+	public Complex(double real, double imaginary)
+	{
+		this.real=real;
+		this.imag =imaginary;
+	}
+	public String toString() {
+        if (imag == 0) return real + "";
+        if (real == 0) return imag + "i";
+        if (imag <  0) return real + " - " + (-imag) + "i";
+        return real + " + " + imag + "i";
+    }
+	public double abs()
+	{
+		Complex z = new Complex(real,imag); 
+		return Math.sqrt(z.real*z.real+z.imag*z.imag);
+	}
+	public Complex add(Complex other) {
+		Complex a =this;
+		double newReal = other.real+ a.real;
+		double newImag = other.imag +a.imag;
+		return new Complex(newReal, newImag);
+	}
+	public Complex times(Complex b) {
+        Complex a = this;
+        double newReal = a.real * b.real - a.imag * b.imag;
+        double newImag = a.real * b.imag + a.imag * b.real;
+        return new Complex(newReal, newImag);
+    }
+	public Complex add(double a, double b)
+	{
+		 Complex c = this;
+		 double newReal = c.real+a;
+		 double newImag = c.imag+b;
+		 return new Complex(newReal, newImag);
+	}
+	public Complex times(double a, double b)
+	{
+		Complex c =this;
+		double newReal = c.real*a-c.imag*b;
+		double newImag = c.real*b-c.imag*a;
+		return new Complex(newReal, newImag);
+	}
+	public static void main(String[] args) {
+		System.out.println("Enter the real part for complex number z1: ");
+		Scanner kb= new Scanner(System.in);
+		double real1= kb.nextDouble();
+		System.out.println("Enter the imaginary part for complex number z1: ");
+		double imag1= kb.nextDouble();
+		System.out.println("Enter the real part for complex number z2: ");
+		double real2= kb.nextDouble();
+		System.out.println("Enter the imaginary part for complex number z2: ");
+		double imag2= kb.nextDouble();
+		Complex z1 = new Complex(real1,imag1);
+		Complex z2 = new Complex(real2,imag2);
+		System.out.println("z1 + z2 = "+ z1.add(z2));
+		System.out.println("z1 * z2 = " + z1.times(z2));
+		System.out.println("The absoluate value of z1 is "+ z1.abs());
+		System.out.println("The absoluate value of z2 is "+ z2.abs());
+	}
+}

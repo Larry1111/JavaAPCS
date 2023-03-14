@@ -1,0 +1,9 @@
+
+public class Examples {
+	public static boolean endsWithStar(String str) {
+		if(!str.equals("")&&str)
+	}
+	public static void main(String[] args) {
+		
+	}
+}

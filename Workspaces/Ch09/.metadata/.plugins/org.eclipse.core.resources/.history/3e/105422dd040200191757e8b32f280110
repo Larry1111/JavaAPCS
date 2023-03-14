@@ -1,0 +1,103 @@
+import java.awt.Color;
+
+public class Homework {
+			//4
+			public static boolean sameScores(int[] scores)
+			{
+				if(scores[0] == scores[scores.length-1])
+				{
+					return true;
+				}
+				else
+					return false;
+			}
+			//6
+			//mysteryCount method counts the number of 0s in array v.
+			//9(Can I just use abs instead of swaping?)
+			public static int[] makePythagoreanTriple(int m, int n)
+			{
+				int[]d = new int[3];
+				int a = Math.abs(m^2-n^2);
+				int b = 2*m*n;
+				int c = m^2+n^2;
+				if(a<b)
+				{
+					d[0]=a;
+					d[1] = b;
+					d[2] = c;
+				}
+				return d;
+			}
+			//10
+			public static int[] createWedge(int n)
+			{
+				int[]a = new int[n];
+				if(n >= 1) {
+				for(int i = 0; i<n;i++)
+				{
+					a[i]=i;
+				}
+				}
+				return a;
+				
+			}
+			//11
+			public static int[] Fibonacci(int n)
+			{
+				int[] a = new int[n+1];
+				a[0]=0;
+				a[1]=1;
+				for(int i=2; i<n; i++)
+				{
+					a[i]=a[i-1]+a[i-2];
+				}
+				return a;
+			}
+			//15
+			public void fillCheckerboard(Color[][] board)
+			{
+				
+			}
+			//20
+			public int[][] pascalTriangle(int n)
+			{
+				
+			}
+			//22
+			char[] hello = {' ', 'h', 'e', 'l','l','o'};
+			int i= 0;
+			while(i<6)
+			{
+				i++;
+				hello[i-1] = hello[i];
+			}
+			hello[5]='!';
+			//23
+			public static boolean isMedian(double[] sample, int m)
+			{
+				int countLess = 0;
+				int countGreater = 0;
+				for(int i=0; i < sample.length;i++)
+				{
+					if(sample[i]> m)
+					{
+						countGreater++;
+					}
+					if(sample[i]<m)
+					{
+						countLess++;
+					}
+				if (countLess == countGreater) {
+					return true;
+				}
+				else
+					return false;
+				}
+			}
+			public static void main(String[] arg) {
+				Examples.printIntArray.createWedge(5);
+			}
+}}
+			
+			
+

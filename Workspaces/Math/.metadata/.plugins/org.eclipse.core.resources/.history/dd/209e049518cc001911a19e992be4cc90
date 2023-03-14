@@ -1,0 +1,57 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class GraphingData extends JPanel {
+    int[] data = {
+    1, 0, 0, 0, -2, 2, 0, -6, -6, 6, 0, -4, 4, -10, -14, 10, 4, 14, -30, -42, 0, -42, -18, 12, 30, 18, -12, 0, 18, 42, 0, -62, -8, -70, -20, -82, -28, -34, -62, -8, -26, 8, -62, 62, 34, -28, 8, -28, 28, 62, 82, -8, 98, 28, 0, -186, -84, -210, -60, -24, -150, -36, -102, -162, 0, -60, -90, 60, -90, -24, 84, -102, -126, 24, -66, -126, 66, 42, 126, 102, 24, 90, -60, 150, -36, 0, 186, 162, 102, -24, 60, -24, 24, 60, 84, 24, 126, -56, -310, -196, -238, -164, -254, -56, -310, 56, -254, 40, -338, -16, -394, -52, 16, -238, -322, 124, -130, -254, -56, -146, -16, 140, 16, -170, -130, -56, 56, -254, -214, -16, -58, -182, -238, 56, 124, 254, 130, -16, 58, 214, -40, 130, -124, -56, 74, -68, 170, 238, -16, -140, 146, 310, 56, -68, 68, -56, -16, 394, 338, 214, 124, 322, 56, 124, 418, 40, -16, 326
+
+    };
+    final int PAD = 20;
+ 
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D g2 = (Graphics2D)g;
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                            RenderingHints.VALUE_ANTIALIAS_ON);
+        int w = getWidth();
+        int h = getHeight();
+        // Draw ordinate.
+        g2.draw(new Line2D.Double(PAD, PAD, PAD, h-PAD));
+        // Draw abcissa.
+        g2.draw(new Line2D.Double(PAD, h-PAD, w-PAD, h-PAD));
+        double xInc = (double)(w - 2*PAD)/(data.length-1);
+        double scale = (double)(h - 2*PAD)/getMax();
+        // Mark data points.
+        g2.setPaint(Color.red);
+        for(int i = 0; i < data.length; i++) {
+            double x = PAD + i*xInc;
+            double y = h - PAD - scale*data[i];
+            g2.fill(new Ellipse2D.Double(x-2, y-2, 4, 4));
+        }
+    }
+ 
+    private int getMax() {
+        int max = -Integer.MAX_VALUE;
+        for(int i = 0; i < data.length; i++) {
+            if(data[i] > max)
+                max = data[i];
+        }
+        return max;
+    }
+ 
+    public static void main(String[] args) {
+        JFrame f = new JFrame();
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.add(new GraphingData());
+        f.setSize(400,500);
+        f.setLocation(200,200);
+        f.setVisible(true);
+    }
+}

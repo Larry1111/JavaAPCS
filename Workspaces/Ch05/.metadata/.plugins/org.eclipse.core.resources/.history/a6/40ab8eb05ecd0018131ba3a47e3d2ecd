@@ -1,0 +1,14 @@
+import java.time.DayOfWeek;
+
+public class dayOfWeeek {
+	    public static void main (String[] args) {
+	        DayOfWeek d = LocalDate.now().getDayOfWeek();
+	        System.out.println(d);
+
+	        int i = LocalDate.of(1999, 12, 31).get(ChronoField.DAY_OF_WEEK);
+	        System.out.println(i);
+
+	        DayOfWeek d2 = DayOfWeek.of(i);
+	        System.out.println(d2);
+
+}

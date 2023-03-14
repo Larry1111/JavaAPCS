@@ -1,0 +1,61 @@
+/**
+ * A menu bar for the Ramblecs game
+ */
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JCheckBoxMenuItem;
+
+public class RamblecsMenu extends JMenuBar 
+    implements ActionListener
+{
+  private Ramblecs game;
+  private JCheckBoxMenuItem sound;
+  private JMenuItem newgame, exit, howtoplay, about;
+  // Constructor:
+  public RamblecsMenu(Ramblecs game)
+  {
+    sound = new JCheckBoxMenuItem();
+    newgame = new JMenuItem("New Game");
+    newgame.addActionListener(this);
+    exit = new JMenuItem("Exit");
+    exit.addActionListener(this);
+    JMenu fileMenu = new JMenu("File");
+    fileMenu.add(newgame);
+    fileMenu.add(exit);
+    fileMenu.add(sound);
+    howtoplay = new JMenuItem("How to play...");
+    about = new JMenuItem("About...");
+    JMenu helpMenu = new JMenu("Help");
+    JMenu preferences = new JMenu("Preferences");
+    preferences.add(sound);
+    helpMenu.add(howtoplay);
+    helpMenu.add(about);
+    this.add(fileMenu);
+    this.add(helpMenu);
+    this.add(preferences);
+    
+  }
+
+  public boolean soundEnabled()
+  {
+    return sound.isSelected();
+  }
+
+  public void actionPerformed(ActionEvent e)
+  {
+    JMenuItem src = (JMenuItem)e.getSource();
+    if(src == newgame)
+    	game.newGame();
+    if(src == exit)
+    	System.exit(0);
+    if(src == about)
+    	RamblecsHelp.showAbout();
+    if(src == howtoplay)
+    	RamblecsHelp.showHelp();
+  }
+}
+

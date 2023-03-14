@@ -1,0 +1,7 @@
+
+public interface Money {
+	default double getAmount() {
+		return getAmount();
+	}
+	
+}

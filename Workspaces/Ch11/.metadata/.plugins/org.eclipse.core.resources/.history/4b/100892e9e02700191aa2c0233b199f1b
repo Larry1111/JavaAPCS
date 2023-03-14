@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+public class IndexEntry implements Comparable<IndexEntry>{
+	private String word;
+	private ArrayList<Integer> numsList;
+	
+	public IndexEntry(String word2) {
+		word = word2.toUpperCase();
+		numsList = new ArrayList<Integer>();
+	}
+	public void add(int num) {
+		if(!numsList.contains(num)) {
+			numsList.add(num); {
+				
+			}
+		}
+	}
+	public String getWord() {
+		return word;
+	}
+	public String toString() {
+		String s = word + " ";
+		for(Integer i: numsList)
+			s+= i +", ";
+		s=s.substring(0,s.length()-2);
+		return s;
+	}
+	public int compareTo(IndexEntry entry) {
+		return word.compareTo(entry.toString());
+	}
+}

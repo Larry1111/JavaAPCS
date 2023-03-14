@@ -1,0 +1,6 @@
+
+public class Nickel1 extends Coin {
+	public String toString(){
+		return "nickel";
+	}
+}

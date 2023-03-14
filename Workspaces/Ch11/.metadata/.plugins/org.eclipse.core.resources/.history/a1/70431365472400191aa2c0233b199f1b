@@ -1,0 +1,121 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+//4
+public class Exercises {
+	public static Double min(ArrayList<Double> list)
+	{
+		double min = list.get(0);
+		for(double elmt: list)
+		{
+			if(min > elmt) {
+				min=elmt;
+			}
+			}
+		return min;
+		}
+//Double min = list.get(0);
+//for (Double elmt: list)
+//if(x.compareTo(min)<0)
+//min=x;
+//return min;
+	//6
+	public static ArrayList<Integer> removeSmallest(ArrayList<Integer> list)
+	{
+		Integer min = list.get(0);
+		for(Integer x: list)
+		{
+			if(x.compareTo(min)<0)
+			{
+				min = x;
+			}
+		}
+		int j = 0;
+		while(j<list.size())
+		{
+			if (list.get(j).compareTo(min)==0) {
+				list.remove(j);
+			}
+			else 
+			{
+				j++;
+			}
+		
+		}
+		return list;
+	}
+	//5
+	public static ArrayList<String> reverse(ArrayList<String> list)
+	{
+		ArrayList<String> list1 = new ArrayList<String>(list.size());
+		for(String elmt: list)
+		{
+			list1.add(0,elmt);
+		}
+		return list1;
+	}
+//	ArrayList<String> list1 = new ArrayList<String>(list.size());
+//	for(int i = list.size()-1;i>0; i--)
+//	{
+//		list1.add(list.get(i));
+//	}
+//	return list1;
+	
+	//7
+	public void filter(ArrayList<Object> list1, ArrayList<Object> list2)
+	{
+		for(Object obj: list2)
+		{
+			int j = 0;
+			while(j<list1.size())
+			{
+				if(list1.get(j)== obj)
+					list1.remove(j);
+				else
+					j++;
+			}
+			
+		}
+	}
+	//10
+	public static void removeConsecutiveDuplicates(ArrayList<String> lst)
+	{
+		for(int i = lst.size()-1; i>0;i--)
+			if(lst.get(i)==lst.get(i-1))
+				lst.remove(i);
+	}
+	//13
+	public static ArrayList<ArrayList<String>> bucketMaker(ArrayList<String> list){
+		ArrayList<ArrayList<String>> output = new ArrayList<ArrayList<String>>();
+		for (char letter = 'a'; letter <= 'z'; letter++) {
+			output.add(new ArrayList<String>());
+		}
+		for (String s: list) {
+			for (char letter = 'a'; letter <= 'z'; letter++) {
+				if (s.startsWith(String.valueOf(letter))) {
+	                output.get(letter-98).add(s);
+	            }
+	        }
+	    }
+	    return output;
+	}
+	public static void main(String[] args) {
+		Scanner kboard = new Scanner(System.in);
+		ArrayList<String> words = new ArrayList<String>();
+		words.add("aadf ");
+		words.add("agasd ");
+		words.add("aasdga ");
+		words.add("badfg ");
+		words.add("cadgaf ");
+		words.add("cadfdg ");
+		words.add("aadf ");
+		words.add("aadggd ");
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		numbers.add(1);
+		numbers.add(2);
+		numbers.add(1);
+		numbers.add(3);
+		numbers.add(1);
+		numbers.add(4);
+		System.out.println(bucketMaker(words));
+	}
+	}

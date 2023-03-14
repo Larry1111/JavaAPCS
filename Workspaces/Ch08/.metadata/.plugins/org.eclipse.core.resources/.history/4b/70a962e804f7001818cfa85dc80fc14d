@@ -1,0 +1,108 @@
+import java.util.Scanner;
+
+public class Chap8 {
+	//2b
+	public static boolean twoStar(String str)
+	{
+		if(str.length()>=2 && str.charAt(str.length()-1)=='*' && str.charAt(str.length()-2)=='*')
+			return true;
+		else 
+			return false;
+	}
+	
+	//3
+	public static String removeDashes(String str)
+	{
+		String num = str.replace("-", "");
+		return num;
+	}
+	
+	//5b
+	public static String last5(String str)
+	{	
+		String ccNumber = "4111 1111 1111 1111";
+		String newNum = ccNumber.replaceAll(" ", "");
+		String last5 = newNum.substring(newNum.length()-5);
+		return last5;
+	}
+	
+	//7
+	public static String convertName(String str)
+	{
+		String str2 = str.trim();
+		int indexComma = str2.indexOf(",");
+		String name = str2.substring(indexComma+1, str2.length()) + " " + str2.substring(0, indexComma); 
+		return name;
+	}
+	
+	//8
+	public static String posToNeg(String str)
+	{
+		String str2 = str.replace("1", "2").replace("0", "1");
+		String str3 = str2.replace("2", "0");
+		return str3;
+	}
+	
+	//13
+	public boolean StartsWith(String prefix)
+	{
+	
+		int n = this.indexOf(prefix);
+		int n1 = n+prefix.length();
+		if(this.substring(n, n1).equals(prefix))
+			return true;
+		else
+			return false;
+	}
+	public boolean EndsWith(String suffix)
+	{
+		int n = this.indexOf(suffix);
+		int n1 = n+suffix.length();
+		if(this.substring(n, n1).equals(suffix))
+			return true;
+		else
+			return false;
+	}
+	
+	//16
+	// 
+	//20
+	public static boolean isValidISBN(String isbn)
+	{
+		int sum = 0, n, m;
+		String s;
+		if(isbn.length()!=13)
+		{
+			return false;
+		}
+		for (int i=1; i<13; i++) {
+			s = isbn.substring(i-1,i);
+			try {
+				n = Character.digit(s, 10);
+			} catch (NumberFormatException e) {
+				return false;
+			}
+			
+			m = ((i%2 == 1) ? 1 : 3);
+			sum += n*m;
+		}
+		
+		try {
+			n = Integer.parseInt(isbn.substring(12,13));
+		} catch (NumberFormatException e) {
+			return false;
+		}
+		
+		return (((10-sum%10)%10)-n == 0);
+
+	}
+	
+	public static void main(String[] args) {
+		while(true) {
+		Scanner kboard = new Scanner(System.in);
+		String input = kboard.nextLine();
+		String input2 = kboard.nextLine();
+		System.out.println(last5(input));
+		}
+	}
+}

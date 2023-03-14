@@ -1,0 +1,5 @@
+INDEX VERSION 1.130+/Users/lizhiyuan/Desktop/APCS/Workspaces/MagpieActivityStarterCode/.metadata/.plugins/org.eclipse.jdt.core
+2048152730.index
+1561683709.index
+705844843.index
+3279024990.index

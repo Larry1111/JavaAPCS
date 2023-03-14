@@ -1,0 +1,6 @@
+
+public class Coin implements Money{
+	//public double getAmount() {
+		
+	//}
+}

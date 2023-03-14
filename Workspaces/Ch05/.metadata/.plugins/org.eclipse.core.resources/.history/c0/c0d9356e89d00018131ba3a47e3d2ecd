@@ -1,0 +1,20 @@
+import java.time.DayOfWeek;
+import java.util.Scanner; 
+public class dayOfWeeek {
+	private static int n;
+	private static int m;
+	public static void dayOfWeek(int day, int date) {
+		day = n;
+		date = m;
+	}
+public static void main(String[] args) {
+			Scanner s = new Scanner(System.in);
+			System.out.println("Enter the day of the week on which the month begins: ");
+			int day1 = s.nextInt();
+			System.out.println("Enter the date in the month that is being found: ");
+			int dayOfWeek1 = s.nextInt();
+			int dayOfWeek = (day1 - (7 - dayOfWeek1 + 1) + 7) %7;
+			System.out.println("The day of the week for January " + day1 + " is "+dayOfWeek);	
+}
+
+}

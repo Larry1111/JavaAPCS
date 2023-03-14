@@ -1,0 +1,21 @@
+
+public class Perf {
+	public static void perfNum() {
+		  int sum=0;
+		  int n = 6;
+		  while(n<=28) {
+		  for(int i = 1;i < n; i++) {
+			  if(n%i ==0) {
+				  sum = sum+i;
+			  }
+			  if(sum==n) {
+				  System.out.print(n);
+			  }
+			  n++;
+		  }
+		  }
+	  }
+	public static void main(String[] args) {
+		perfNum();
+	}
+}

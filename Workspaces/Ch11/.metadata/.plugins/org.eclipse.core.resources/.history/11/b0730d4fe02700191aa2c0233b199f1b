@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+public class DocumentIndex extends ArrayList<IndexEntry>{
+	
+	public void addWord(String word, int num) {
+		
+	}
+	public void addAllWords(String str, int num) {
+		String[] strArray = str.split("[., \"!?]"); //Splits the array except for blank lines
+        for(String s : strArray) //For every String sorted
+           if(!s.equals("")) //If it is not an empty line
+              addWord(s, num); //Add this to the num position
+	}
+	private int foundOrInserted(String word) {
+		IndexEntry temp = new IndexEntry(word); //Instantiates IndexEntry with word
+        for(IndexEntry element : this) //For every IndexEntry in this DocumentIndex
+        {
+           if(element == get(indexOf(element))) //If it is equal to the DocumentIndexes word
+              return 0; //Return the position 0 which means nothing in this case
+	}
+        for(IndexEntry element : this) //For every IndexEntry in the same DocumentIndex again
+        {
+           if(word.compareTo(element.getWord()) > 0) //If the word is of higher ACSII value
+           {
+              add(indexOf(element) - 1, temp); //Add the String to that position in DocumentIndex
+              return indexOf(element) - 1; //Return that position
+           }
+        }
+        return -1; //This generally should not reach this line
+     }
+}

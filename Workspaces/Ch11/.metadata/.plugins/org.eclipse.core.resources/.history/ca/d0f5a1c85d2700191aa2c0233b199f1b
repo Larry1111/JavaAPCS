@@ -1,0 +1,13 @@
+
+public class DocumentIndex {
+	
+	public void addWord(String word, int num) {
+		
+	}
+	public void addAllWords(String str, int num) {
+		
+	}
+	private int foundOrInserted(String word) {
+		
+	}
+}

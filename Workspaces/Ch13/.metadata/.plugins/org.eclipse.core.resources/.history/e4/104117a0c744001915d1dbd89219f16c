@@ -1,0 +1,14 @@
+
+public class Assignment {
+	public 
+//3
+	public int product(int a, int b) {
+		if(b==0) {
+			return 0;
+		}
+		else {
+			return a + product(a, b-1);
+		}
+	}
+	
+}
